@@ -16,18 +16,18 @@ public class Ponto{
 	
 	public static void main(String[] args){
 		Ponto p1 = new Ponto();
-		p1.setX(10);
-		p1.setY(20);
+		p1.setX(0);
+		p1.setY(0);
 		Ponto p2 = new Ponto();
-		p2.setX(15);
-		p2.setY(30);		
+		p2.setX(1);
+		p2.setY(1);		
 		Ponto p3 = new Ponto();
 		p3 = p1;
 		Ponto p4 = p3;
-		
-		System.out.println(p1.getX() +" - "+p1.getY());
-		System.out.println(p2.getX() +" - "+p2.getY());
-		System.out.println(p3.getX() +" - "+p3.getY());
-		System.out.println(p4.getX() +" - "+p4.getY());
+		double distancia, y12, x12;
+		y12 = p1.getY() - p2.getY();
+		x12 = p1.getX() - p2.getX();
+		distancia = Math.sqrt((x12*x12)+(y12*y12));
+		System.out.println(distancia);
 	}
 }
