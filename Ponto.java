@@ -1,5 +1,13 @@
 public class Ponto{
 	private double x, y;
+	public Ponto(){
+		System.out.println("Construtor 1" + this);
+	}	
+	public Ponto(double x, double y){
+		this.x = x;
+		this.y = y;
+		System.out.println("Contrutor 2 - Valores: X: " + this.x + " Y: " + this.y);
+	}
 	public void setX(double x){
 		this.x = x;
 	}
@@ -15,19 +23,14 @@ public class Ponto{
 	
 	
 	public static void main(String[] args){
-		Ponto p1 = new Ponto();
-		p1.setX(0);
-		p1.setY(0);
-		Ponto p2 = new Ponto();
-		p2.setX(1);
-		p2.setY(1);		
+		Ponto p1 = new Ponto(1, 4);
+		Ponto p2 = new Ponto(3, 2);
 		Ponto p3 = new Ponto();
-		p3 = p1;
-		Ponto p4 = p3;
+		Ponto p4 = new Ponto();
 		double distancia, y12, x12;
 		y12 = p1.getY() - p2.getY();
 		x12 = p1.getX() - p2.getX();
 		distancia = Math.sqrt((x12*x12)+(y12*y12));
-		System.out.println(distancia);
+		System.out.println("Distancia entre os pontos p1 e p2 é: " + distancia);
 	}
 }
