@@ -1,8 +1,9 @@
-import  java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Collections;
 
 public class Principal{
 	public static void main(String[] args){
+	
             //Criando a ArrayList do tipo "Nota", com o nome de "notas"
             ArrayList<Nota> notas = new ArrayList<Nota>();
             
