@@ -1,4 +1,4 @@
-public class Nota{
+public class Nota implements Comparable<Nota>{
 	private double valor;
 	private Aluno aluno;
 	private Disciplina disciplina;
@@ -15,5 +15,14 @@ public class Nota{
 	}
 	public Disciplina getDisciplina(){
 		return this.disciplina;
+	}
+        @Override
+        public int compareTo(Nota outra){
+		if(this.valor < outra.getValor())
+			return 1;
+		else if(this.valor > outra.getValor())
+			return -1;
+		else
+			return 0;
 	}
 }
